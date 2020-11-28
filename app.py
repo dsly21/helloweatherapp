@@ -1,3 +1,9 @@
+"""
+1. Отправить бота на хостинг, проверить работу
+2. Узнать как прогноз на день
+3.
+"""
+
 from dotenv import load_dotenv
 import telegram
 import os
@@ -16,9 +22,10 @@ bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
 
 def weather_get(lat, lon):
+    # поправить по pep8
     weath = requests.post(f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=hourly,daily,minutely&units=metric&lang=ru&appid={WEATHER_API}").json()
     temp = weath.get("current").get("temp")
-    return print(f'сейчас {temp} градусов') #пока не ясно как вывести несколько нужных мне параметров
+    return (f'сейчас {temp} градусов') #пока не ясно как вывести несколько нужных мне параметров
 
 
 def send_message(message):
@@ -32,7 +39,7 @@ def main():
 
     while True:
         try:
-            if hour == 14:
+            if hour == 13:
                 send_message(text)
                 send_message(weath)
                 break
