@@ -39,7 +39,7 @@ def main():
 
     while True:
         try:
-            if hour == 13:
+            if hour == 15:
                 send_message(text)
                 send_message(weath)
                 break
