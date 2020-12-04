@@ -1,9 +1,3 @@
-"""
-1. Отправить бота на хостинг, проверить работу
-2. Узнать как прогноз на день
-3.
-"""
-
 from dotenv import load_dotenv
 import telegram
 import os
@@ -18,7 +12,7 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 WEATHER_API = os.getenv('WEATHER_API')
 text = 'доброе утро Коля!'
-bot = telegram.Bot(token=TELEGRAM_TOKEN)
+bot = telegram.bot(token=TELEGRAM_TOKEN)
 
 
 def weather_get(lat, lon):
