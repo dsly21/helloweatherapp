@@ -12,7 +12,7 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 WEATHER_API = os.getenv('WEATHER_API')
 text = 'доброе утро Коля!'
-bot = telegram.bot(token=TELEGRAM_TOKEN)
+bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
 
 def weather_get(lat, lon):
