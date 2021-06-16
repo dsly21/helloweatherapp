@@ -45,7 +45,7 @@ def main():
                 send_message(text)
                 send_message(weath)
                 break
-            time.sleep(1800)  # 2400
+            time.sleep(10)  # 2400
         except Exception as e:
             logging.exception(e, "Exception occurred")
             print(f'Бот упал с ошибкой: {e}')
